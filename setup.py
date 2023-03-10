@@ -58,7 +58,12 @@ setup(
     include_package_data=True,
     install_requires=[
         "eth-ape>=0.6.0,<1.0",
+        "fastapi>=0.91.0,<0.92.0",
+        "uvicorn[standard]",
     ],
+    entry_points={
+        "console_scripts": ["silverback=silverback._cli:cli"],
+    },
     python_requires=">=3.8,<4",
     extras_require=extras_require,
     py_modules=["silverback"],
